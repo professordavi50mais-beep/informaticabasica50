@@ -44,10 +44,12 @@ const registerForm = document.querySelector("#registerForm");
 const loginForm = document.querySelector("#loginForm");
 const authSection = document.querySelector("#authSection");
 const dashboardSection = document.querySelector("#dashboardSection");
+const publicSite = document.querySelector("#publicSite");
 const logoutButton = document.querySelector("#logoutButton");
 const registerStatus = document.querySelector("#registerStatus");
 const loginStatus = document.querySelector("#loginStatus");
 const fillDemoButton = document.querySelector("#fillDemoButton");
+const planSelect = document.querySelector("#plan");
 
 function getStudents() {
   return JSON.parse(localStorage.getItem(storageKey) || "[]");
@@ -127,11 +129,14 @@ function renderDashboard(student) {
   });
 
   authSection.classList.add("hidden");
+  publicSite.classList.add("hidden");
   dashboardSection.classList.remove("hidden");
   logoutButton.classList.remove("hidden");
+  document.querySelector("#area-aluno").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function showAuth() {
+  publicSite.classList.remove("hidden");
   authSection.classList.remove("hidden");
   dashboardSection.classList.add("hidden");
   logoutButton.classList.add("hidden");
@@ -214,6 +219,16 @@ logoutButton.addEventListener("click", () => {
 fillDemoButton.addEventListener("click", () => {
   document.querySelector("#loginEmail").value = "aluno@demo.com";
   document.querySelector("#loginPassword").value = "123456";
+});
+
+document.querySelectorAll("[data-buy-plan]").forEach((button) => {
+  button.addEventListener("click", () => {
+    planSelect.value = button.dataset.buyPlan;
+    registerStatus.textContent = "Plano selecionado. Agora preencha o cadastro para liberar o acesso.";
+    registerStatus.classList.remove("error");
+    document.querySelector("#area-aluno").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector("#name").focus({ preventScroll: true });
+  });
 });
 
 seedDemoStudent();

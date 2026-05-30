@@ -3,106 +3,252 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tecnologia Sem Medo 50+ | Área do Aluno</title>
+    <title>Tecnologia Sem Medo 50+ | Informática Básica</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">Área do aluno</p>
-        <h1>Tecnologia Sem Medo 50+</h1>
-      </div>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Tecnologia Sem Medo 50+">
+        <span class="brand-mark">50+</span>
+        <span>Tecnologia Sem Medo</span>
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="#trilhas">Trilhas</a>
+        <a href="#planos">Comprar</a>
+        <a href="#area-aluno">Área do aluno</a>
+      </nav>
       <button class="ghost hidden" id="logoutButton" type="button">Sair</button>
     </header>
 
     <main>
-      <section class="auth-grid" id="authSection" aria-label="Cadastro e login">
-        <form class="panel" id="registerForm">
-          <h2>Criar cadastro</h2>
-          <p>Cadastre o aluno e escolha a trilha que será liberada.</p>
-
-          <label for="name">Nome completo</label>
-          <input id="name" name="name" autocomplete="name" required />
-
-          <label for="phone">WhatsApp</label>
-          <input id="phone" name="phone" autocomplete="tel" placeholder="(00) 00000-0000" required />
-
-          <label for="registerEmail">E-mail</label>
-          <input id="registerEmail" name="email" type="email" autocomplete="email" required />
-
-          <label for="registerPassword">Senha</label>
-          <input id="registerPassword" name="password" type="password" minlength="6" autocomplete="new-password" required />
-
-          <label for="plan">Plano escolhido</label>
-          <select id="plan" name="plan" required>
-            <option value="completo">Tecnologia Sem Medo 50+: Curso Completo</option>
-            <option value="computador">Computador Sem Medo 50+</option>
-            <option value="celular">Celular Sem Medo 50+</option>
-          </select>
-
-          <button type="submit">Cadastrar aluno</button>
-          <p class="status" id="registerStatus" role="status"></p>
-        </form>
-
-        <form class="panel" id="loginForm">
-          <h2>Entrar no curso</h2>
-          <p>Acesse com e-mail e senha cadastrados.</p>
-
-          <label for="loginEmail">E-mail</label>
-          <input id="loginEmail" name="email" type="email" autocomplete="email" required />
-
-          <label for="loginPassword">Senha</label>
-          <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
-
-          <button type="submit">Entrar</button>
-          <button class="link-button" id="fillDemoButton" type="button">Usar aluno de demonstração</button>
-          <p class="status error" id="loginStatus" role="alert"></p>
-        </form>
-      </section>
-
-      <section class="dashboard hidden" id="dashboardSection" aria-label="Painel do aluno">
-        <div class="welcome">
-          <div>
-            <p class="eyebrow">Meu curso</p>
-            <h2 id="studentName">Aluno</h2>
-            <p id="studentPlan">Plano</p>
+      <div id="publicSite">
+        <section class="hero" id="inicio">
+          <div class="hero-content">
+            <p class="eyebrow">Curso de informática básica para o público 50+</p>
+            <h1>Tecnologia para usar no dia a dia, com calma e confiança.</h1>
+            <p>
+              Aprenda computador, celular, internet, WhatsApp, segurança digital e inteligência artificial em aulas
+              práticas, acolhedoras e no seu ritmo.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#planos">Escolher minha trilha</a>
+              <a class="button secondary" href="#area-aluno">Já sou aluno</a>
+            </div>
           </div>
-          <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">Suporte pelo WhatsApp</a>
+        </section>
+
+        <section class="section intro-band" aria-label="Resumo do curso">
+          <div>
+            <p class="eyebrow">Por que este curso funciona</p>
+            <h2>Menos medo, mais autonomia.</h2>
+          </div>
+          <div class="feature-grid">
+            <article>
+              <span class="feature-icon">A</span>
+              <h3>Aulas passo a passo</h3>
+              <p>Explicações simples, exemplos reais e prática assistida em cada encontro.</p>
+            </article>
+            <article>
+              <span class="feature-icon">P</span>
+              <h3>Prática de verdade</h3>
+              <p>O aluno aprende fazendo: mensagens, documentos, sites úteis, PDFs, fotos e aplicativos.</p>
+            </article>
+            <article>
+              <span class="feature-icon">S</span>
+              <h3>Segurança desde o início</h3>
+              <p>Golpes, senhas, links falsos e cuidados com documentos aparecem de forma prática.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section split-section" id="trilhas">
+          <div class="split-copy">
+            <p class="eyebrow">Trilhas do curso</p>
+            <h2>Escolha o caminho que combina com a sua necessidade.</h2>
+            <p>
+              O aluno pode começar pelo celular, pelo computador ou fazer o curso completo. Assim o investimento fica
+              mais acessível e cada pessoa aprende o que realmente precisa agora.
+            </p>
+          </div>
+          <div class="image-collage" aria-label="Alunos 50+ usando tecnologia">
+            <img
+              src="https://images.pexels.com/photos/5710561/pexels-photo-5710561.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Homem idoso usando notebook e celular em casa"
+            />
+            <img
+              src="https://images.pexels.com/photos/27087223/pexels-photo-27087223.jpeg?auto=compress&cs=tinysrgb&w=700"
+              alt="Homem sênior sorrindo enquanto usa notebook e smartphone"
+            />
+          </div>
+        </section>
+
+        <section class="section plans-section" id="planos">
+          <div class="section-heading">
+            <p class="eyebrow">Planos de acesso</p>
+            <h2>Compre a trilha ideal para você.</h2>
+            <p>Valores podem ser definidos depois. Por enquanto, os botões simulam a escolha do plano no cadastro.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card">
+              <p class="plan-kicker">Mais completo</p>
+              <h3>Tecnologia Sem Medo 50+</h3>
+              <p class="price">60h</p>
+              <p>Computador + celular + segurança digital + IA.</p>
+              <ul>
+                <li>Trilha completa de computador</li>
+                <li>Trilha completa de celular</li>
+                <li>ChatGPT e Gemini</li>
+                <li>Revisão e prática assistida</li>
+              </ul>
+              <button type="button" data-buy-plan="completo">Comprar curso completo</button>
+            </article>
+
+            <article class="price-card">
+              <p class="plan-kicker">Para notebook e PC</p>
+              <h3>Computador Sem Medo 50+</h3>
+              <p class="price">34h</p>
+              <p>Para quem quer aprender computador, notebook, internet, e-mail e arquivos.</p>
+              <ul>
+                <li>Windows do básico</li>
+                <li>Mouse, teclado e atalhos</li>
+                <li>Arquivos, pastas e e-mail</li>
+                <li>Sites úteis e segurança</li>
+              </ul>
+              <button type="button" data-buy-plan="computador">Comprar trilha computador</button>
+            </article>
+
+            <article class="price-card">
+              <p class="plan-kicker">Para o dia a dia</p>
+              <h3>Celular Sem Medo 50+</h3>
+              <p class="price">24h</p>
+              <p>Para usar melhor WhatsApp, fotos, aplicativos, internet, Gov.br e IA no celular.</p>
+              <ul>
+                <li>Configurações essenciais</li>
+                <li>WhatsApp, fotos e vídeos</li>
+                <li>Apps úteis e serviços</li>
+                <li>Segurança no celular</li>
+              </ul>
+              <button type="button" data-buy-plan="celular">Comprar trilha celular</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reassurance">
+          <div>
+            <p class="eyebrow">Pensado para 50+</p>
+            <h2>Visual claro, letras confortáveis e linguagem sem complicação.</h2>
+          </div>
+          <div class="reassurance-list">
+            <p>Ritmo tranquilo, sem pressa para memorizar.</p>
+            <p>Exercícios práticos com situações reais.</p>
+            <p>Materiais de apoio para consultar depois.</p>
+            <p>Suporte para o primeiro acesso à área do aluno.</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="section auth-section" id="area-aluno" aria-label="Cadastro e login">
+        <div class="section-heading">
+          <p class="eyebrow">Área do aluno</p>
+          <h2>Cadastro e acesso ao curso</h2>
         </div>
 
-        <div class="summary">
-          <article>
-            <strong id="progressCount">0 de 0</strong>
-            <span>aulas concluídas</span>
-          </article>
-          <article>
-            <strong id="nextLesson">Primeira aula</strong>
-            <span>próxima atividade</span>
-          </article>
-          <article>
-            <strong id="accessType">Completo</strong>
-            <span>acesso liberado</span>
-          </article>
+        <div class="auth-grid" id="authSection">
+          <form class="panel" id="registerForm">
+            <h3>Criar cadastro</h3>
+            <p>Cadastre o aluno e escolha a trilha que será liberada.</p>
+
+            <label for="name">Nome completo</label>
+            <input id="name" name="name" autocomplete="name" required />
+
+            <label for="phone">WhatsApp</label>
+            <input id="phone" name="phone" autocomplete="tel" placeholder="(00) 00000-0000" required />
+
+            <label for="registerEmail">E-mail</label>
+            <input id="registerEmail" name="email" type="email" autocomplete="email" required />
+
+            <label for="registerPassword">Senha</label>
+            <input
+              id="registerPassword"
+              name="password"
+              type="password"
+              minlength="6"
+              autocomplete="new-password"
+              required
+            />
+
+            <label for="plan">Plano escolhido</label>
+            <select id="plan" name="plan" required>
+              <option value="completo">Tecnologia Sem Medo 50+: Curso Completo</option>
+              <option value="computador">Computador Sem Medo 50+</option>
+              <option value="celular">Celular Sem Medo 50+</option>
+            </select>
+
+            <button type="submit">Cadastrar aluno</button>
+            <p class="status" id="registerStatus" role="status"></p>
+          </form>
+
+          <form class="panel" id="loginForm">
+            <h3>Entrar no curso</h3>
+            <p>Acesse com e-mail e senha cadastrados.</p>
+
+            <label for="loginEmail">E-mail</label>
+            <input id="loginEmail" name="email" type="email" autocomplete="email" required />
+
+            <label for="loginPassword">Senha</label>
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+
+            <button type="submit">Entrar</button>
+            <button class="link-button" id="fillDemoButton" type="button">Usar aluno de demonstração</button>
+            <p class="status error" id="loginStatus" role="alert"></p>
+          </form>
         </div>
 
-        <div class="content-layout">
-          <section class="course-area">
-            <h3>Aulas liberadas</h3>
-            <div class="lesson-list" id="lessonList"></div>
-          </section>
+        <section class="dashboard hidden" id="dashboardSection" aria-label="Painel do aluno">
+          <div class="welcome">
+            <div>
+              <p class="eyebrow">Meu curso</p>
+              <h2 id="studentName">Aluno</h2>
+              <p id="studentPlan">Plano</p>
+            </div>
+            <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">Suporte pelo WhatsApp</a>
+          </div>
 
-          <aside class="materials">
-            <h3>Materiais de apoio</h3>
-            <a href="https://www.invertexto.com/" target="_blank" rel="noreferrer">Invertexto</a>
-            <a href="https://www.ilovepdf.com/pt" target="_blank" rel="noreferrer">iLovePDF</a>
-            <a href="https://www.canva.com/pt_br/" target="_blank" rel="noreferrer">Canva</a>
-            <a href="https://translate.google.com/" target="_blank" rel="noreferrer">Google Tradutor</a>
-            <a href="https://keep.google.com/" target="_blank" rel="noreferrer">Google Keep</a>
-            <a href="https://www.virustotal.com/" target="_blank" rel="noreferrer">VirusTotal</a>
-            <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">ChatGPT</a>
-            <a href="https://gemini.google.com/" target="_blank" rel="noreferrer">Gemini</a>
-          </aside>
-        </div>
+          <div class="summary">
+            <article>
+              <strong id="progressCount">0 de 0</strong>
+              <span>aulas concluídas</span>
+            </article>
+            <article>
+              <strong id="nextLesson">Primeira aula</strong>
+              <span>próxima atividade</span>
+            </article>
+            <article>
+              <strong id="accessType">Completo</strong>
+              <span>acesso liberado</span>
+            </article>
+          </div>
+
+          <div class="content-layout">
+            <section class="course-area">
+              <h3>Aulas liberadas</h3>
+              <div class="lesson-list" id="lessonList"></div>
+            </section>
+
+            <aside class="materials">
+              <h3>Materiais de apoio</h3>
+              <a href="https://www.invertexto.com/" target="_blank" rel="noreferrer">Invertexto</a>
+              <a href="https://www.ilovepdf.com/pt" target="_blank" rel="noreferrer">iLovePDF</a>
+              <a href="https://www.canva.com/pt_br/" target="_blank" rel="noreferrer">Canva</a>
+              <a href="https://translate.google.com/" target="_blank" rel="noreferrer">Google Tradutor</a>
+              <a href="https://keep.google.com/" target="_blank" rel="noreferrer">Google Keep</a>
+              <a href="https://www.virustotal.com/" target="_blank" rel="noreferrer">VirusTotal</a>
+              <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">ChatGPT</a>
+              <a href="https://gemini.google.com/" target="_blank" rel="noreferrer">Gemini</a>
+            </aside>
+          </div>
+        </section>
       </section>
     </main>
 
