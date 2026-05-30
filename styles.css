@@ -139,8 +139,9 @@ main {
   padding: 130px clamp(18px, 5vw, 72px) 72px;
   background:
     linear-gradient(90deg, rgba(15, 60, 66, 0.9), rgba(15, 60, 66, 0.64) 46%, rgba(15, 60, 66, 0.18)),
-    url("https://images.pexels.com/photos/27087223/pexels-photo-27087223.jpeg?auto=compress&cs=tinysrgb&w=1800") center / cover;
+    url("https://images.pexels.com/photos/7260635/pexels-photo-7260635.jpeg?auto=compress&cs=tinysrgb&w=1800") center / cover;
   color: #fff;
+  animation: heroBreath 18s ease-in-out infinite alternate;
 }
 
 .hero-content {
@@ -157,6 +158,47 @@ main {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero-badges span {
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-weight: 800;
+  backdrop-filter: blur(10px);
+}
+
+.topic-strip {
+  overflow: hidden;
+  border-top: 1px solid rgba(8, 77, 88, 0.18);
+  border-bottom: 1px solid rgba(8, 77, 88, 0.18);
+  background: var(--yellow);
+}
+
+.topic-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  padding: 14px 0;
+  animation: slideTopics 30s linear infinite;
+}
+
+.topic-track span {
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .section {
@@ -208,6 +250,22 @@ main {
 
 .feature-grid article {
   padding: 24px;
+}
+
+.float-card {
+  transform: translateY(0);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.float-card:hover,
+.price-card:hover,
+.journey-grid article:hover {
+  transform: translateY(-6px);
+  border-color: rgba(15, 111, 125, 0.34);
+  box-shadow: 0 22px 54px rgba(33, 41, 51, 0.18);
 }
 
 .feature-icon {
@@ -276,6 +334,10 @@ main {
   display: flex;
   flex-direction: column;
   padding: 26px;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
 }
 
 .price-card:nth-child(1) {
@@ -308,6 +370,46 @@ main {
 
 .price-card button {
   margin-top: auto;
+}
+
+.course-journey {
+  width: 100%;
+  max-width: none;
+  padding: 72px max(18px, calc((100% - 1180px) / 2));
+  background: #fff;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.journey-grid article {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 28px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.journey-grid strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 26px;
 }
 
 .reassurance {
@@ -386,12 +488,18 @@ button,
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
 
 button:hover,
 .button:hover,
 .whatsapp:hover {
   background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15, 111, 125, 0.22);
 }
 
 .secondary {
@@ -547,6 +655,39 @@ button:hover,
   border-bottom: 0;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 650ms ease,
+    transform 650ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroBreath {
+  from {
+    background-position: center;
+  }
+
+  to {
+    background-position: center 42%;
+  }
+}
+
+@keyframes slideTopics {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 960px) {
   .site-header {
     align-items: stretch;
@@ -561,7 +702,7 @@ button:hover,
     min-height: 640px;
     background:
       linear-gradient(180deg, rgba(15, 60, 66, 0.84), rgba(15, 60, 66, 0.58)),
-      url("https://images.pexels.com/photos/27087223/pexels-photo-27087223.jpeg?auto=compress&cs=tinysrgb&w=1200") center / cover;
+      url("https://images.pexels.com/photos/7260635/pexels-photo-7260635.jpeg?auto=compress&cs=tinysrgb&w=1200") center / cover;
   }
 
   .intro-band,
@@ -571,7 +712,8 @@ button:hover,
   .summary,
   .content-layout,
   .feature-grid,
-  .pricing-grid {
+  .pricing-grid,
+  .journey-grid {
     grid-template-columns: 1fr;
   }
 
@@ -604,6 +746,7 @@ button:hover,
   }
 
   .hero-actions,
+  .hero-badges,
   .welcome {
     align-items: stretch;
     flex-direction: column;
@@ -622,5 +765,25 @@ button:hover,
   .badge {
     grid-column: 2;
     justify-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
