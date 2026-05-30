@@ -139,7 +139,7 @@ main {
   padding: 130px clamp(18px, 5vw, 72px) 72px;
   background:
     linear-gradient(90deg, rgba(15, 60, 66, 0.9), rgba(15, 60, 66, 0.64) 46%, rgba(15, 60, 66, 0.18)),
-    url("https://images.pexels.com/photos/7260635/pexels-photo-7260635.jpeg?auto=compress&cs=tinysrgb&w=1800") center / cover;
+    url("https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=1800") center / cover;
   color: #fff;
   animation: heroBreath 18s ease-in-out infinite alternate;
 }
@@ -702,7 +702,7 @@ button:hover,
     min-height: 640px;
     background:
       linear-gradient(180deg, rgba(15, 60, 66, 0.84), rgba(15, 60, 66, 0.58)),
-      url("https://images.pexels.com/photos/7260635/pexels-photo-7260635.jpeg?auto=compress&cs=tinysrgb&w=1200") center / cover;
+      url("https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=1200") center / cover;
   }
 
   .intro-band,
