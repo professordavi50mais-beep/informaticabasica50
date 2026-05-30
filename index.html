@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tecnologia Sem Medo 50+ | Área do Aluno</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Área do aluno</p>
+        <h1>Tecnologia Sem Medo 50+</h1>
+      </div>
+      <button class="ghost hidden" id="logoutButton" type="button">Sair</button>
+    </header>
+
+    <main>
+      <section class="auth-grid" id="authSection" aria-label="Cadastro e login">
+        <form class="panel" id="registerForm">
+          <h2>Criar cadastro</h2>
+          <p>Cadastre o aluno e escolha a trilha que será liberada.</p>
+
+          <label for="name">Nome completo</label>
+          <input id="name" name="name" autocomplete="name" required />
+
+          <label for="phone">WhatsApp</label>
+          <input id="phone" name="phone" autocomplete="tel" placeholder="(00) 00000-0000" required />
+
+          <label for="registerEmail">E-mail</label>
+          <input id="registerEmail" name="email" type="email" autocomplete="email" required />
+
+          <label for="registerPassword">Senha</label>
+          <input id="registerPassword" name="password" type="password" minlength="6" autocomplete="new-password" required />
+
+          <label for="plan">Plano escolhido</label>
+          <select id="plan" name="plan" required>
+            <option value="completo">Tecnologia Sem Medo 50+: Curso Completo</option>
+            <option value="computador">Computador Sem Medo 50+</option>
+            <option value="celular">Celular Sem Medo 50+</option>
+          </select>
+
+          <button type="submit">Cadastrar aluno</button>
+          <p class="status" id="registerStatus" role="status"></p>
+        </form>
+
+        <form class="panel" id="loginForm">
+          <h2>Entrar no curso</h2>
+          <p>Acesse com e-mail e senha cadastrados.</p>
+
+          <label for="loginEmail">E-mail</label>
+          <input id="loginEmail" name="email" type="email" autocomplete="email" required />
+
+          <label for="loginPassword">Senha</label>
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+
+          <button type="submit">Entrar</button>
+          <button class="link-button" id="fillDemoButton" type="button">Usar aluno de demonstração</button>
+          <p class="status error" id="loginStatus" role="alert"></p>
+        </form>
+      </section>
+
+      <section class="dashboard hidden" id="dashboardSection" aria-label="Painel do aluno">
+        <div class="welcome">
+          <div>
+            <p class="eyebrow">Meu curso</p>
+            <h2 id="studentName">Aluno</h2>
+            <p id="studentPlan">Plano</p>
+          </div>
+          <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">Suporte pelo WhatsApp</a>
+        </div>
+
+        <div class="summary">
+          <article>
+            <strong id="progressCount">0 de 0</strong>
+            <span>aulas concluídas</span>
+          </article>
+          <article>
+            <strong id="nextLesson">Primeira aula</strong>
+            <span>próxima atividade</span>
+          </article>
+          <article>
+            <strong id="accessType">Completo</strong>
+            <span>acesso liberado</span>
+          </article>
+        </div>
+
+        <div class="content-layout">
+          <section class="course-area">
+            <h3>Aulas liberadas</h3>
+            <div class="lesson-list" id="lessonList"></div>
+          </section>
+
+          <aside class="materials">
+            <h3>Materiais de apoio</h3>
+            <a href="https://www.invertexto.com/" target="_blank" rel="noreferrer">Invertexto</a>
+            <a href="https://www.ilovepdf.com/pt" target="_blank" rel="noreferrer">iLovePDF</a>
+            <a href="https://www.canva.com/pt_br/" target="_blank" rel="noreferrer">Canva</a>
+            <a href="https://translate.google.com/" target="_blank" rel="noreferrer">Google Tradutor</a>
+            <a href="https://keep.google.com/" target="_blank" rel="noreferrer">Google Keep</a>
+            <a href="https://www.virustotal.com/" target="_blank" rel="noreferrer">VirusTotal</a>
+            <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">ChatGPT</a>
+            <a href="https://gemini.google.com/" target="_blank" rel="noreferrer">Gemini</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

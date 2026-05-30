@@ -1,0 +1,319 @@
+:root {
+  --bg: #f4f1ea;
+  --surface: #ffffff;
+  --ink: #212529;
+  --muted: #5d6470;
+  --line: #d8d4ca;
+  --primary: #176b87;
+  --primary-dark: #0f4f64;
+  --accent: #b94d2f;
+  --ok: #1f7a4d;
+  --shadow: 0 16px 42px rgba(30, 34, 38, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px clamp(18px, 4vw, 48px);
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+main {
+  width: min(1180px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+.eyebrow {
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.panel,
+.welcome,
+.summary article,
+.course-area,
+.materials {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.panel {
+  padding: 28px;
+}
+
+label {
+  display: block;
+  margin: 18px 0 6px;
+  font-weight: 700;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  min-height: 50px;
+  border-radius: 6px;
+  font: inherit;
+}
+
+input,
+select {
+  border: 1px solid #b9c0c8;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--ink);
+}
+
+button,
+.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  margin-top: 22px;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 18px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.whatsapp:hover {
+  background: var(--primary-dark);
+}
+
+.ghost {
+  width: auto;
+  margin: 0;
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.ghost:hover {
+  color: #fff;
+}
+
+.link-button {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--primary);
+}
+
+.link-button:hover {
+  color: #fff;
+}
+
+.status {
+  min-height: 28px;
+  margin: 14px 0 0;
+  color: var(--ok);
+  font-weight: 700;
+}
+
+.error {
+  color: #b3261e;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.dashboard {
+  display: grid;
+  gap: 22px;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 26px;
+}
+
+.welcome p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.whatsapp {
+  width: auto;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.summary article {
+  padding: 20px;
+}
+
+.summary strong {
+  display: block;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.summary span {
+  color: var(--muted);
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 22px;
+}
+
+.course-area,
+.materials {
+  padding: 24px;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 12px;
+}
+
+.lesson {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfaf7;
+}
+
+.lesson input {
+  width: 24px;
+  min-height: 24px;
+}
+
+.lesson strong {
+  display: block;
+}
+
+.lesson span {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #e7f1f4;
+  color: var(--primary-dark);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.materials {
+  align-self: start;
+}
+
+.materials a {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.materials a:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 860px) {
+  body {
+    font-size: 17px;
+  }
+
+  .topbar,
+  .welcome {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .auth-grid,
+  .summary,
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson {
+    grid-template-columns: auto 1fr;
+  }
+
+  .badge {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .whatsapp,
+  .ghost {
+    width: 100%;
+  }
+}
